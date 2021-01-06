@@ -12,4 +12,4 @@ wslview http://localhost:8888
 
 # 3. Removed password, with explicit cmd
 #sh -c "docker run -u $(id -u):$(id -g) -it --gpus all -p 8888:8888 -v /home/neo/dev:/tf/dev lxc902/myjupyter:latest bash -c \"source /etc/bash.bashrc && jupyter notebook --notebook-dir=/tf --ip 0.0.0.0 --no-browser --allow-root --NotebookApp.token='' --NotebookApp.password='' \""
-sh -c "docker run -u $(id -u):$(id -g) -it --gpus all -p 8888:8888 -v /home/neo/dev:/tf/dev lxc902/myjupyter bash -c \"source /etc/bash.bashrc && jupyter notebook --notebook-dir=/tf --ip 0.0.0.0 --no-browser --allow-root --NotebookApp.token='' --NotebookApp.password='' \""
+sh -c "docker run -d -u $(id -u):$(id -g) -it --gpus all -p 8888:8888 -v /home/neo/dev:/tf/dev lxc902/myjupyter bash -c \"source /etc/bash.bashrc && jupyter notebook --notebook-dir=/tf --ip 0.0.0.0 --no-browser --allow-root --NotebookApp.token='' --NotebookApp.password='' \""
